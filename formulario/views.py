@@ -28,3 +28,25 @@ def lista(request):
     return render(request, 'lista.html', context)
 
     
+def editar(request,pk):
+    cliente = DadosPessoais.objects.get(id=pk)
+    form = FormularioForm(instance= cliente)
+    context = {'form':form}
+
+    if request.method=='POST':
+        form = FormularioForm(request.POST, instance=cliente)
+
+        if form.is_valid():
+            form.save()
+            return redirect('formulario:lista')
+    return render(request, 'editar.html', context)
+
+
+def deletar(request, pk):
+    cliente = DadosPessoais.objects.get(id=pk)
+    context = {'cliente':cliente}
+
+    if request.method=='POST':
+        cliente.delete()
+        return redirect('formulario:lista')
+    return render(request, 'deletar.html', context)

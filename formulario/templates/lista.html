@@ -26,6 +26,8 @@
                     <td>{{ cliente.cidade }}</td>
                     <td>{{ cliente.estado }}</td>
                     <td>{{ cliente.endereco }}</td>
+                    <td><a href="{% url 'formulario:editar' cliente.id %}"><i class="fa fa-pencil"></i></a></td>
+                    <td><a href="{% url 'formulario:deletar' cliente.id %}"><i class="fa fa-trash"></i></a></td>
                 </tr>
                 {% endfor %} 
             </table>
