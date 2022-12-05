@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 class DadosPessoais(models.Model):
     genero_list = (
-        ("maculino", "Masculino"),
-        ("feminino", "Feminino"),
-        ("outro", "Outro")
+        ("Masculino", "Masculino"),
+        ("Feminino", "Feminino"),
+        ("Outro", "Outro")
     )
     estado_list = (
         ('AC', 'AC'), ('AL', 'AL'), ('AM', 'AM'), ('AP', 'AP'), ('BA','BA'), ('CE', 'CE'), ('DF', 'DF'), ('ES', 'ES'), 

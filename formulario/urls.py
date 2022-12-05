@@ -5,4 +5,5 @@ app_name = 'formulario'
 
 urlpatterns = [
     path('cadastrar/', cadastrar, name='cadastrar'),
+    path('lista/', lista, name='lista'),
 ]

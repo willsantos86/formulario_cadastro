@@ -6,3 +6,5 @@ class FormularioForm(ModelForm):
         model = DadosPessoais
         fields = ['nome', 'email', 'telefone', 'genero', 'data_nascimento',
                 'cidade', 'estado', 'endereco']
+
+                
